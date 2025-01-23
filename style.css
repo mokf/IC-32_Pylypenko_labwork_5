@@ -1,0 +1,18 @@
+a{
+    text-decoration: none;
+    color: #000000;
+}
+button{
+    margin: 10px;
+    font-size: 20px;
+    width: 200px;
+    height: 70px;
+    border: none;
+    border-radius: 10px;
+    background: #B2D7F9;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    background-color: #68a8e0;
+}

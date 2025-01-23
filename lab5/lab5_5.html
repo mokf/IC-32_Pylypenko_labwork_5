@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+        .return-button{
+            margin: 10px;
+            font-size: 20px;
+            width: 200px;
+            height: 70px;
+            border: none;
+            border-radius: 10px;
+            background: #B2D7F9;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #68a8e0;
+        }
+        h1 {
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .calendar-container {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .calendar-header button {
+            padding: 5px 10px;
+        }
+        .calendar-header button {
+            cursor: pointer;
+            border-radius: 10px;
+            margin: 2px;
+        }
+        .calendar-body {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin-top: 10px;
+        }
+        .day {
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .day:hover {
+            background-color: #e0e0e0;
+        }
+        .selected {
+            background-color: #4285f4;
+            color: white;
+        }
+        .calendar-footer {
+            margin-top: 10px;
+        }
+        .cancel-button, .returnDate-button {
+            border-radius: 10px;
+            background-color: #ff4c4c;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><button class="return-button">Повернутися</button></a>
+        <h1>Завдання 5</h1>
+    </header>
+
+    <main>
+        <div class="calendar-container" id="calendar">
+            <div class="calendar-header">
+              <button onclick="changeMonth(-1)">&#9664; Місяць</button>
+              <div id="monthYear"></div>
+              <button onclick="changeMonth(1)">Місяць &#9654;</button>
+            </div>
+            <div class="calendar-header">
+              <button onclick="changeYear(-1)">&#9664; Рік</button>
+              <button onclick="changeYear(1)">Рік &#9654;</button>
+            </div>
+            <div class="calendar-body" id="daysContainer"></div>
+            <div class="calendar-footer">
+                <button class="returnDate-button" onclick="resetToCurrentDate()">Поточний місяць</button>
+              <button class="cancel-button" onclick="cancelSelection()">Відмінити вибір</button>
+            </div>
+          </div>
+    </main>
+
+    <footer></footer>
+    
+    <script src="lab5_5.js"></script>
+</body>
+</html>
